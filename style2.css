@@ -29,15 +29,9 @@ li a:hover {
   background-color: #111;
 }
 
-/* .active {
-  float: right;
-} */
-
-p {
-  font-family: "Audiowide", cursive;
-}
-
-canvas {
-  margin: 5% auto 0 auto;
-  display: block;
+.container {
+  display: grid;
+  grid-gap: 50px 100px;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
 }

@@ -4,20 +4,14 @@ function  preload(){
   img = loadImage('images/port.jpg');
 }
 function setup() {
-  cnv = createCanvas(img.width, img.height);
+  createCanvas(img.width, img.height);
     image(img,0,0);  
-  //let newCanvasX = (windowWidth - img.width)/2;
-  //let newCanvasY= (windowHeight - img.height)/2;
-  //cnv.position(newCanvasX, newCanvasY);
 }
 
 
 
 function keyPressed(){
-  
-  // let newCanvasX = (windowWidth - img.width);
-  // let newCanvasY= (windowHeight - img.height);
-  //cnv.position(newCanvasX, newCanvasY);
+
   for(let col = 0;col< img.width; col+=35){
     for(let row = 0; row<img.height; row+=35){
       let xPos = col;
@@ -48,10 +42,6 @@ function keyPressed(){
 
 function mouseMoved(){
   if (mouseX < img.width){
-  
-  let newCanvasX = (windowWidth - img.width);
-  let newCanvasY= (windowHeight - img.height);
-  //cnv.position(newCanvasX, newCanvasY);
   for(let col = 0;col< img.width; col+=35){
     for(let row = 0; row<img.height; row+=35){
       let xPos = col;
@@ -77,10 +67,6 @@ function mouseMoved(){
   } else{
    }
     if (mouseY > img.height){
-  
-  let newCanvasX = (windowWidth - img.width);
-  let newCanvasY= (windowHeight - img.height);
-  //cnv.position(newCanvasX, newCanvasY);
   for(let col = 0;col< img.width; col+=35){
     for(let row = 0; row<img.height; row+=35){
       let xPos = col;
@@ -110,4 +96,10 @@ function mouseMoved(){
 
 function mousePressed(){
   image(img,0,0);
+}
+
+function keyTyped(){
+  if (key === 's'){
+    saveCanvas('fileName', 'png');
+  }
 }
