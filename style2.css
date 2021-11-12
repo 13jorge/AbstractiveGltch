@@ -1,3 +1,17 @@
+::-webkit-scrollbar-track {
+  background: rgb(44, 44, 44);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb :hover {
+  background: #2e2d2d;
+}
+
 html,
 body {
   margin: 0;
