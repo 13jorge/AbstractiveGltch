@@ -105,7 +105,10 @@ function keyPressed(){
 
       }
 
-
+      // if (key === 'r'){
+      //   fill(color('red'));
+      //  rect(col,row, random(100),random(10))
+      //  } 
 
     }
 
