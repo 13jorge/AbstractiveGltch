@@ -71,41 +71,178 @@ p {
 }
 
 img {
-  height: 95vh;
   width: 100%;
+  height: 95vh;
 }
 
-.switch1 {
+/* .switch1 {
   height: 95vh;
   width: 100%;
   background: url("images/port.jpg") no-repeat;
   background-size: cover;
   display: inline-block;
 }
-
-/* .switch1::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 40px;
-  background: url(images/port.jpg) no-repeat;
-  background-size: cover;
-  filter: sepia(100%);
-  opacity: 0;
-} */
-
 .switch1:hover {
   height: 95vh;
   width: 100%;
   background: url("images/red2.png") no-repeat;
   background-size: cover;
+} */
+
+.switch1 {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: url(images/abstract2.png) 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.switch1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95vh;
+  background: url(images/gltch2.png) 0 0 no-repeat;
+  background-size: cover;
+  opacity: 1;
+  /* animation: change 0.6s infinite; */
+}
+
+.switch1:hover:before {
+  animation: change 0.6s infinite;
+}
+
+.switch2 {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: url(images/abstract0.png) 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.switch2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95vh;
+  background: url(images/gltch3.png) 0 0 no-repeat;
+  background-size: cover;
+  opacity: 1;
+  /* animation: change 0.6s infinite; */
+}
+
+.switch2:hover:before {
+  animation: change 0.6s infinite;
+}
+
+.switch3 {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: url(images/abstract4.png) 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.switch3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95vh;
+  background: url(images/gltch4.png) 0 0 no-repeat;
+  background-size: cover;
+  opacity: 1;
+  /* animation: change 0.6s infinite; */
+}
+
+.switch3:hover:before {
+  animation: change 0.6s infinite;
+}
+
+/* .switch4 {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: url(images/abstract2.png) 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden;
+} */
+
+/* .switch4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95vh;
+  background: url(images/gltch0.png) 0 0 no-repeat;
+  background-size: cover;
+  opacity: 1;
+  animation: change 0.6s infinite;
+} */
+
+.switch4:hover:before {
+  animation: change 0.6s infinite;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 0;
+    filter: hue-rotate(0deg);
+    /* opacity: 0.5; */
+  }
+  10% {
+    background-position: 4px 0;
+    opacity: 0.5;
+  }
+  20% {
+    background-position: -4px 0;
+    opacity: 0.5;
+  }
+  30% {
+    background-position: 12px 0;
+    opacity: 0.5;
+  }
+  40% {
+    background-position: -16px 0;
+    opacity: 0.5;
+  }
+  50% {
+    background-position: 44px 11px;
+    opacity: 0.5;
+  }
+  60% {
+    background-position: -22px 0;
+    opacity: 0.5;
+  }
+  70% {
+    background-position: 0 -22px;
+    opacity: 0.8;
+  }
+  80% {
+    background-position: -10px 0;
+    opacity: 0.8;
+  }
+  100% {
+    background-position: 0 0;
+    filter: hue-rotate(360deg);
+    /* opacity: 0; */
+  }
 }
 
 .pic {
   position: relative;
   width: 100%;
   height: 95vh;
-  background: url(images/red.png) no-repeat;
+  background: url(images/gltch1.png) no-repeat;
   background-size: cover;
   overflow: hidden;
 }
@@ -114,16 +251,69 @@ img {
   content: "";
   position: absolute;
   width: 100%;
-  height: 40px;
-  background: url(images/port.jpg) no-repeat;
+  height: 80px;
+  background: url(images/abstract1.png) no-repeat;
   background-size: cover;
-  filter: sepia(100%);
+  /* filter: sepia(100%); */
   opacity: 0;
 }
 
 .pic:hover:before {
   opacity: 0.7;
-  animation: glitch 2s infinite linear;
+  animation: glitch 1.3s infinite linear;
+  /* animation: glitch2 2s infinite linear; */
+}
+
+.pic2 {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: url(images/gltch5.png) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.pic2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background: url(images/abstract3.png) no-repeat;
+  background-size: cover;
+  /* filter: sepia(100%); */
+  opacity: 0;
+}
+
+.pic2:hover:before {
+  opacity: 0.7;
+  animation: glitch 1.3s infinite linear;
+  /* animation: glitch2 2s infinite linear; */
+}
+
+.pic3 {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background: url(images/gltch6.png) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.pic3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background: url(images/abstract5.png) no-repeat;
+  background-size: cover;
+  /* filter: sepia(100%); */
+  opacity: 0;
+}
+
+.pic3:hover:before {
+  opacity: 0.7;
+  animation: glitch 1.3s infinite linear;
+  /* animation: glitch2 2s infinite linear; */
 }
 
 @keyframes glitch {
@@ -165,15 +355,11 @@ img {
   }
   80% {
     top: 80%;
-    background-position: 10px -7200px;
+    background-position: 10px -640px;
   }
   90% {
     top: 90%;
-    background-position: -12px -800px;
-  }
-  95% {
-    top: 95%;
-    background-position: -10px -850px;
+    background-position: -12px -720px;
   }
   100% {
     top: 100%;
