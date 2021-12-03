@@ -13,8 +13,8 @@ function  preload(){
   // img = loadImage('images/abstract0.png');
 }
 function setup() {
-  para = createP('');
-  para.parent("#instr"); 
+  // para = createP('');
+  // para.parent("#instr"); 
   cnv=createCanvas(abstract[2].width, abstract[2].height);
   cnv.parent("#canvasImg");
   image(random(abstract),0,0);
@@ -49,11 +49,11 @@ function mouseDragged(){
 }
 
 function keyPressed(){
-  for(let col = 0;col< abstract[2].width; col+=random(50, 100)){
-    for(let row = 0; row< abstract[2].height; row+=random(50, 100)){
+  for(let col = 0;col< abstract[2].width; col+=15){
+    for(let row = 0; row< abstract[2].height; row+=15){
       let xPos = col;
       let yPos = row;
-      let c = abstract[2].get(col,row);
+      let c = random(abstract).get(col,row);
 
   if (key === 'r'){
     push();
@@ -101,14 +101,52 @@ function keyPressed(){
           
               pop();
                 }
-
+      if (key === 'j'){
+        let c = abstract[0].get(col,row);
+        fill(color(c)); 
+        strokeWeight(random(3));
+       rect(col,row, 10, 10)
+       }      
+       if (key === 'k'){
+        let c = abstract[1].get(col,row);
+        fill(color(c)); 
+        strokeWeight(random(3));
+       rect(col,row, 10, 10)
+       }      
+       if (key === 'l'){
+        let c = abstract[2].get(col,row);
+        fill(color(c)); 
+        strokeWeight(random(3));
+       rect(col,row, 10, 10)
+       }      
+       if (key === 'u'){
+        let c = abstract[3].get(col,row);
+        fill(color(c)); 
+        strokeWeight(random(3));
+       rect(col,row, 10, 10)
+       }      
+       if (key === 'p'){
+        let c = abstract[4].get(col,row);
+        fill(color(c)); 
+        strokeWeight(random(3));
+       rect(col,row, 10, 10)
+       }       
+       if (key === 'o'){
+        let c = abstract[5].get(col,row);
+        fill(color(c)); 
+        strokeWeight(random(3));
+       rect(col,row, 10, 10)
+       }     
+        if (key === 'c'){
+        let c = abstract[4].get(col,row);
+        fill(color(c)); 
+        strokeWeight(random(3));
+        circle(col, row, 20);
+       } 
 
       }
 
-      // if (key === 'r'){
-      //   fill(color('red'));
-      //  rect(col,row, random(100),random(10))
-      //  } 
+
 
     }
 
@@ -120,7 +158,7 @@ function keyPressed(){
 function keyTyped(){
   if (key === 's'){
     saveCanvas('fileName', 'png');
-  }  if (key === 'c'){
+  }  if (key === 'a'){
     image(random(abstract),0,0);
   }
 }
