@@ -870,11 +870,13 @@ img {
 }
 
 @media (max-width: 1024px) {
+  .container {
+    min-height: calc(25vh);
+  }
   .container2 {
     grid-template-columns: 1fr 1fr;
   }
-
   img {
-    height: 100%;
+    height: 27vh;
   }
 }
